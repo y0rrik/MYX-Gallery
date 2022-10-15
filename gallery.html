@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <title>MYX localstorage gallery</title>
+
+    <link rel="icon" href="https://myxrobotics.com/favicon.ico">
+    <link rel="stylesheet" href="gallery.css">
+    
+    <script src="https://use.fontawesome.com/995954f74e.js"></script>
+    <script src="data.js" defer></script>
+    <script src="gallery.js" defer></script>
+</head>
+
+<body>
+    <div id="header">
+        <a href="https://myxrobotics.com/" target="_blank" class="logo"><img src="https://myxrobotics.com/static/media/myx-logo.2cf5f1c5.svg" alt="MYX logo" /></a>
+        <h1>LocalStorage gallery app</h1>
+    </div>
+
+    <div id="content">
+        <div class="nav">
+
+            <div class="upload">
+                <label for="uplaod_images">
+                    <i class="fa fa-camera"></i> Upload image
+                    <input type="file" id="upload_images" accept="image/png, image/jpeg" />
+                    
+                </label>
+                <small class="notice">* Please note that image size must be under 1MB!</small>
+                    <small id="allert">The image is larger than 1MB</small>
+            </div>
+
+            <button type="button" id="delete" disabled><i class="fa fa-trash"></i> Delete</button>
+
+            <ul id="pagination"></ul>
+
+        </div><!-- nav -->
+
+        <div id="gallery"><!-- Uploaded images container --></div>
+
+        <div id="empty_gallery">Please uplaod some images!</div>
+        
+    </div><!-- content -->
+    
+    <div id="ligthBox"><img src="" alt="" id="selectedImg"/></div>
+</body>
+</html>
